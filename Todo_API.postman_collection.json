@@ -1,0 +1,39 @@
+{
+  "info": {
+    "name": "Todo API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create To-Do",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": {
+          "raw": "http://localhost:3000/todos",
+          "host": ["http://localhost:3000"],
+          "path": ["todos"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\":\"Test\",\"description\":\"Desc\"}"
+        }
+      }
+    },
+    {
+      "name": "List To-Dos",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/todos?page=1&limit=5",
+          "host": ["http://localhost:3000"],
+          "path": ["todos"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "5" }
+          ]
+        }
+      }
+    }
+  ]
+}
